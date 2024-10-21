@@ -4,5 +4,9 @@ FROM nginx:alpine
 # Copia los archivos de la página web al directorio donde Nginx sirve los archivos
 COPY . /usr/share/nginx/html
 
+# COPY files/default /etc/nginx/sites-available/default
+
+CMD [ "nginx", "-g", "daemon off;" ]
+
 # Exponer el puerto 80 para hacer que el contenedor sirva la página web
 EXPOSE 80
