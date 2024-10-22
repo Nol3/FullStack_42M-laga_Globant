@@ -5,19 +5,35 @@
     box-sizing: border-box;
 }
 
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: darkblue;
+}
+
 body {
     font-family: Arima, Arial, sans-serif;
-    background-color: silver;
-    color: #333;
+    background: radial-gradient(
+        #ffcf33,
+        #ffcf33 20%,
+        #ffff66 21%,
+        #bbeeff 100%
+      );
+    font-size: 16px;
     line-height: 1.6;
     padding: 20px;
 }
 
 header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     background: rgb(9, 195, 195);
     color: #fff;
     padding: 20px;
-    text-align: center;
+    text-align: right;
+    border-radius: 25px;
 }
 
 main {
@@ -33,11 +49,16 @@ footer {
 }
 
 /* Estilos para el grid de imágenes */
+img {
+    max-width: 100%;
+    margin-bottom: 1em;
+    display: block;
+    outline: 2px solid whitesmoke;
+}
+
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
+    columns: 5 320px;
+    column-gap: 1em;
 }
 
 .image-item {

@@ -1,4 +1,4 @@
-const accessKey = '01NaKsZIj_hfxDAHQ8XhFdiMgZomw97WXjgJRzTBrW4';
+const accessKey = 'L6RNwtrrD-0wZwDyKgyNuGKIPh3-ghdompppGhbYncE';
 const imageContainer = document.getElementById('image-grid');
 let page = 1;
 let isLoading = false;
@@ -38,13 +38,11 @@ function displayImages(images) {
         const width = image.width;
         const height = image.height;
 
-        if (width < height) {
-            const imgElement = document.createElement('img');
-            imgElement.src = image.urls.small;  // Usa la imagen de tamaño pequeño
-            imgElement.alt = image.alt_description || 'Unsplash Image';
-            imgElement.classList.add('image-item');
-            imageContainer.appendChild(imgElement);
-        }
+        const imgElement = document.createElement('img');
+        imgElement.src = image.urls.small;  // Usa la imagen de tamaño pequeño
+        imgElement.alt = image.alt_description || 'Unsplash Image';
+        imgElement.classList.add('image-item');
+        imageContainer.appendChild(imgElement);
     });
 }
 
